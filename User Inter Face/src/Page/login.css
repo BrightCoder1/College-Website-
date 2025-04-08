@@ -1,0 +1,89 @@
+.student {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.s-login {
+    width: 100%;
+    background: url(https://images.unsplash.com/photo-1508615039623-a25605d2b022?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.f-login {
+    margin-top: 10rem;
+    border: 2px solid #143D60;
+    background-color: #0a0a0a87;
+    width: 30%;
+    border-radius: 20px;
+    padding: 10px 0px;
+    min-height: 50vh;
+    text-align: center;
+}
+
+.loginh1 {
+    font-size: 2rem;
+    color: #e5e4e4;
+}
+
+.login-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginArea {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 24px;
+    margin: 3px;
+}
+
+.label {
+    font-size: 17px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.loginInput {
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    outline: none;
+}
+
+.submit {
+    padding: 10px 20px;
+    font-size: 22px;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    background: #143D60;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #e30000;
+}
+
+.loginimg {
+    margin: auto;
+    /* width: 100%; */
+}
+
+.toast {
+    z-index: 9999999999;
+}

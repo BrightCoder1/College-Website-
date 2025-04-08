@@ -1,0 +1,44 @@
+{
+    "images": [
+        {
+            "id": 1,
+            "url": "http://www.vivekcollege.org/images/eDistrict%20UP.png"
+        },
+        {
+            "id": 2,
+            "url": "http://www.vivekcollege.org/images/GOUP.png"
+        },
+        {
+            "id": 3,
+            "url": "http://www.vivekcollege.org/images/Gov.%20UP.jpg"
+        },
+        {
+            "id": 4,
+            "url": "http://www.vivekcollege.org/images/india.gov.in.png"
+        },
+        {
+            "id": 5,
+            "url": "http://www.vivekcollege.org/images/dpt%20of%20science%20and%20tech.png"
+        },
+        {
+            "id": 6,
+            "url": "http://www.vivekcollege.org/images/delnet.jpg"
+        },
+        {
+            "id": 7,
+            "url": "http://www.vivekcollege.org/images/pathshala.png"
+        },
+        {
+            "id": 8,
+            "url": "http://www.vivekcollege.org/images/Shikha%20Vibhag.png"
+        },
+        {
+            "id": 9,
+            "url": "http://www.vivekcollege.org/images/swayam%20prabha.png"
+        },
+        {
+            "id": 10,
+            "url": "http://www.vivekcollege.org/images/Swayam_logo.jpg"
+        }
+    ]
+}

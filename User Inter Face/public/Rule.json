@@ -1,0 +1,54 @@
+{
+    "rules": [
+        {
+            "id": 1,
+            "title": "Minimum GPA Requirement",
+            "description": "Applicants must have a minimum GPA of 3.0 to be considered for admission."
+        },
+        {
+            "id": 2,
+            "title": "Standardized Test Scores",
+            "description": "Submission of SAT/ACT scores is required. Minimum scores may apply depending on the program."
+        },
+        {
+            "id": 3,
+            "title": "Application Deadlines",
+            "description": "Applications must be submitted by the specified deadline to be reviewed for the upcoming term."
+        },
+        {
+            "id": 4,
+            "title": "Letter of Recommendation",
+            "description": "One or more letters of recommendation from teachers or mentors are required."
+        },
+        {
+            "id": 5,
+            "title": "Identity Proof",
+            "description": "Applicants must submit a government-issued photo ID, such as a passport, national ID card, or driver's license."
+        },
+        {
+            "id": 6,
+            "title": "Academic Transcripts",
+            "description": "Official transcripts from all previously attended educational institutions must be submitted."
+        },
+        {
+            "id": 7,
+            "title": "Passport Size Photographs",
+            "description": "Two recent passport-sized photographs are required for identity verification and student records."
+        },
+        {
+            "id": 8,
+            "title": "Proof of Address",
+            "description": "Applicants must submit valid proof of address, such as a utility bill, rental agreement, or bank statement."
+        },
+        {
+            "id": 9,
+            "title": "Medical Certificate",
+            "description": "A recent medical certificate verifying good health is required for enrollment."
+        },
+        {
+            "id": 10,
+            "title": "Application Fee Payment",
+            "description": "Applicants must pay a non-refundable application fee as part of the submission process. A receipt of payment should be uploaded."
+        }
+    ]
+}

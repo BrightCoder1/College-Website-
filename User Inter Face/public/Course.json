@@ -1,0 +1,160 @@
+{
+    "course": [
+        {
+            "id": 1,
+            "coursename": "BCA",
+            "detail": "Bachelor of Computer Applications focuses on computer science and its applications in various fields.",
+            "url": "https://dolphinlifesciences.com/wp-content/uploads/2022/12/BCA-Course-Eligibilities-768x576.jpeg"
+        },
+        {
+            "id": 2,
+            "coursename": "MCA",
+            "detail": "Master of Computer Applications is a postgraduate degree focusing on advanced computer science concepts.",
+            "url": "https://pimt.in/wp-content/uploads/2021/12/master-of-computer-applications-cover-min.jpg"
+        },
+        {
+            "id": 3,
+            "coursename": "B.Sc",
+            "detail": "Bachelor of Science covers foundational and advanced topics in physical, chemical, and biological sciences.",
+            "url": "https://www.krmangalam.edu.in/wp-content/uploads/2024/09/BSc-Full-Form-Admission-Eligibility-and-Careers-768x432.webp"
+        },
+        {
+            "id": 4,
+            "coursename": "B.Sc Honours",
+            "detail": "An advanced undergraduate degree with a focus on specialization in a particular science subject.",
+            "url": "https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_09_BSc-Honours.png"
+        },
+        {
+            "id": 5,
+            "coursename": "B.Com",
+            "detail": "Bachelor of Commerce focuses on commerce, finance, accounting, and economics.",
+            "url": "https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/02/18195704/BCom.jpg"
+        },
+        {
+            "id": 6,
+            "coursename": "M.Com",
+            "detail": "Master of Commerce focuses on advanced studies in commerce, finance, and business management.",
+            "url": "https://shooliniuniversity.com/blog/wp-content/uploads/2023/04/M.Com-Degree.jpg"
+        },
+        {
+            "id": 7,
+            "coursename": "BBA",
+            "detail": "Bachelor of Business Administration focuses on management, leadership, and entrepreneurship skills.",
+            "url": "https://www.admissionfever.com/Media/clgimg/gallery/728_gallery.jpg"
+        },
+        {
+            "id": 8,
+            "coursename": "MBA",
+            "detail": "Master of Business Administration focuses on advanced business and management strategies.",
+            "url": "https://www.mbarendezvous.com/images/top-online-mba-courses-in-india-2021.jpg"
+        },
+        {
+            "id": 9,
+            "coursename": "B.A",
+            "detail": "Bachelor of Arts covers humanities, social sciences, and liberal arts subjects.",
+            "url": "https://shooliniuniversity.com/blog/wp-content/uploads/2022/12/BA-degree.jpg"
+        },
+        {
+            "id": 10,
+            "coursename": "B.A Honours",
+            "detail": "An undergraduate degree offering in-depth knowledge in a specific humanities or social science subject.",
+            "url": "https://www.jagranjosh.com/imported/images/E/Articles/BA-Hons-vs-BA-Degree.jpg"
+        },
+        {
+            "id": 11,
+            "coursename": "BA.Ed",
+            "detail": "Bachelor of Arts in Education prepares students for a career in teaching and education.",
+            "url": "https://images.shiksha.com/mediadata/images/articles/1663040400phpaK1EGK.jpeg"
+        },
+        {
+            "id": 12,
+            "coursename": "BHM",
+            "detail": "Bachelor of Hotel Management trains students in hospitality management and hotel operations.",
+            "url": "https://dolphinlifesciences.com/wp-content/uploads/2022/07/BHM-course-768x512.jpg"
+        },
+        {
+            "id": 13,
+            "coursename": "LLB",
+            "detail": "Bachelor of Laws is an undergraduate program in legal education for becoming a lawyer.",
+            "url": "https://law.careers360.com/sites/default/files/2020-11/LLB-1.jpg"
+        },
+        {
+            "id": 14,
+            "coursename": "LLM",
+            "detail": "Master of Laws is a postgraduate law degree offering advanced legal studies and specialization.",
+            "url": "https://images.shiksha.com/mediadata/images/articles/1679378434php1fnhXG.jpeg"
+        },
+        {
+            "id": 15,
+            "coursename": "Polytechnic Diploma",
+            "detail": "A technical diploma offering practical skills and training in various engineering and technical fields.",
+            "url": "https://images.shiksha.com/mediadata/images/articles/1679380617phpmVWRne.jpeg"
+        },
+        {
+            "id": 16,
+            "coursename": "B.Pharm",
+            "detail": "Bachelor of Pharmacy focuses on pharmaceutical science and prepares students for a career in pharmacy.",
+            "url": "https://dolphinlifesciences.com/wp-content/uploads/2021/06/Bachelor-of-Pharmacy-B.Pharma-Course.jpg"
+        },
+        {
+            "id": 17,
+            "coursename": "D.Pharm",
+            "detail": "Diploma in Pharmacy is a short-term program for training in basic pharmaceutical science and practice.",
+            "url": "https://images.shiksha.com/mediadata/images/articles/1679381001phpWBiMzi.jpeg"
+        },
+        {
+            "id": 18,
+            "coursename": "B.Ed",
+            "detail": "Bachelor of Education trains students to become professional educators and teachers.",
+            "url": "https://images.shiksha.com/mediadata/images/articles/1679390418phpxEF3Ib.jpeg"
+        },
+        {
+            "id": 19,
+            "coursename": "M.Ed",
+            "detail": "Master of Education is a postgraduate program focusing on advanced teaching methods and educational research.",
+            "url": "https://www.careers360.com/sites/default/files/2022-09/M.Ed-2.jpg"
+        },
+        {
+            "id": 20,
+            "coursename": "B.Tech",
+            "detail": "Bachelor of Technology offers education in various engineering disciplines, combining theory and practical applications.",
+            "url": "https://images.shiksha.com/mediadata/images/articles/1679381485phpEf6EKy.jpeg"
+        },
+        {
+            "id": 21,
+            "coursename": "M.Tech",
+            "detail": "Master of Technology is a postgraduate engineering degree focusing on specialized and advanced engineering studies.",
+            "url": "https://images.shiksha.com/mediadata/images/articles/1679390941php3p4AvA.jpeg"
+        },
+        {
+            "id": 22,
+            "coursename": "MBBS",
+            "detail": "Bachelor of Medicine and Bachelor of Surgery prepares students for a career in medicine and surgery.",
+            "url": "https://www.sharda.ac.in/blog/wp-content/uploads/2021/05/MBBS.jpg"
+        },
+        {
+            "id": 23,
+            "coursename": "BDS",
+            "detail": "Bachelor of Dental Surgery trains students to become dental professionals and oral health specialists.",
+            "url": "https://images.shiksha.com/mediadata/images/articles/1679381542php7T5ocW.jpeg"
+        },
+        {
+            "id": 24,
+            "coursename": "BPT",
+            "detail": "Bachelor of Physiotherapy educates students in physical therapy and rehabilitation practices.",
+            "url": "https://shooliniuniversity.com/blog/wp-content/uploads/2023/05/Bachelor-of-Physiotherapy-BPT-.jpg"
+        },
+        {
+            "id": 25,
+            "coursename": "GNM",
+            "detail": "General Nursing and Midwifery prepares students for careers in nursing, focusing on patient care and midwifery.",
+            "url": "https://www.aimlay.com/wp-content/uploads/2022/12/gnm-nursing.jpg"
+        },
+        {
+            "id": 26,
+            "coursename": "ANM",
+            "detail": "Auxiliary Nurse Midwifery trains students to assist in basic health care and midwifery services.",
+            "url": "https://www.aimlay.com/wp-content/uploads/2022/12/ANM-Course.jpg"
+        }
+    ]
+}

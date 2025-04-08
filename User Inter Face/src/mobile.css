@@ -1,0 +1,462 @@
+.Vlogection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vlogh1 {
+    font-size: 3rem;
+    margin: 0;
+    line-height: 69px;
+    letter-spacing: 0px;
+    color: #1f348d;
+    margin-top: 9rem;
+}
+
+/* mobile */
+@media (max-width: 992px) {
+    .home {
+        flex-direction: column;
+    }
+
+    .why {
+        align-items: flex-start;
+        min-height: 35vh;
+        flex-direction: column;
+        align-items: center;
+        align-items: center;
+        height: 76vh;
+    }
+
+    .whyImg {
+        margin-top: 2rem;
+        height: 367px;
+        width: 322px;
+        border-radius: 20%;
+        border: 2px solid #000000e5;
+    }
+
+    .whyFlex {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .whyFlex-h1 {
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    .whyflex-p {
+        width: 90%;
+        font-size: 15px;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .whyflexli {
+        font-size: 12px;
+    }
+
+    .Years-h1 {
+        font-size: 20px;
+
+    }
+
+    .history-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .history-box-p {
+        font-size: 21px;
+        padding: 9px 19px;
+        line-height: 29px;
+        letter-spacing: 0px;
+    }
+
+    .history-img {
+        width: 367px;
+        border-radius: 20px;
+    }
+
+    .recognitions-scroll {
+        gap: 2px;
+    }
+
+    .login {
+        width: 100%;
+        height: 38vh;
+    }
+
+    .leader-box {
+        width: 245px;
+    }
+
+    .leader-p {
+        font-size: 11px;
+        line-height: 18px;
+        overflow-y: scroll;
+
+    }
+
+    .leader {
+        height: 28vh;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hamburger-icon {
+        display: block;
+        margin-right: 2rem;
+    }
+
+    .list {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        flex-direction: column;
+        background-color: #000000e5;
+        height: 100vh;
+        width: 60%;
+        padding-top: 100px;
+        gap: 2rem;
+        transition: 0.5s ease-in-out;
+    }
+
+    .leader-box {
+        width: 245px;
+    }
+
+    .list.active {
+        right: 0;
+        right: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .recognitions-scroll {
+        gap: 2px;
+    }
+
+    .login {
+        width: 100%;
+        height: 38vh;
+    }
+
+    .leader-p {
+        font-size: 11px;
+        line-height: 18px;
+        overflow-y: scroll;
+
+    }
+
+    .leader {
+        height: 28vh;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    .list {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        flex-direction: column;
+        background-color: #000000e5;
+        height: 100vh;
+        width: 60%;
+        padding-top: 100px;
+        gap: 2rem;
+        transition: 0.5s ease-in-out;
+    }
+
+    .leader-box {
+        width: 245px;
+    }
+
+    .list.active {
+        right: 0;
+    }
+
+    .recognitions-scroll {
+        gap: 2px;
+    }
+
+    .login {
+        width: 100%;
+        height: 38vh;
+    }
+
+    .leader-p {
+        font-size: 11px;
+        line-height: 18px;
+        overflow-y: scroll;
+
+    }
+
+    .leader {
+        height: 28vh;
+    }
+
+    .footerStart {
+        justify-content: center;
+    }
+
+    .footerh1 {
+        font-size: 13px;
+    }
+
+    .footer-list {
+        gap: 3px;
+    }
+
+    .footertag {
+        font-size: 9px;
+    }
+
+    .footer-list {
+        display: block;
+    }
+
+    .footerEnd {
+        margin: 4px;
+    }
+
+    .courseBox {
+        flex-direction: column;
+    }
+
+    .courseP {
+        width: 100%;
+    }
+
+    .course1 {
+        margin-top: 7rem;
+        width: 86%;
+    }
+
+    .course2 {
+        width: 80%;
+    }
+
+    .courseimg {
+        border-radius: 44px;
+    }
+
+    .courseimg {
+        height: auto;
+    }
+
+    .c-box {
+        width: 262px;
+        height: 385px;
+    }
+
+    .vlogh1 {
+        font-size: 3rem;
+        margin-top: 1rem;
+        padding: 12px;
+    }
+
+    .vlogp {
+        font-size: 22px;
+        width: 93%;
+        font-weight: lighter;
+        margin: 0 auto;
+        letter-spacing: 3px;
+    }
+
+    .vlog-section {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 686px) {
+    .h2-heading {
+        font-size: 2rem;
+    }
+
+    .vlog-img {
+        height: 389px;
+        width: 403px;
+    }
+
+    .vlogH1 {
+        font-size: 2.5rem;
+    }
+
+    .home-p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .leader-h1 {
+        font-size: 20px;
+    }
+
+    .homeImg {
+        width: 75% !important;
+        margin-top: -100px;
+    }
+
+    .history {
+        margin-top: 6rem;
+    }
+
+    .history-box-p {
+        font-size: 15px;
+    }
+
+    .leader-box {
+        width: 245px;
+    }
+
+    .history-heading {
+        font-size: 1.2rem;
+    }
+
+    .history-img {
+        width: 351px;
+        border-radius: 20px;
+    }
+
+    .recognitions-scroll {
+        gap: 2px;
+    }
+
+    .login {
+        width: 100%;
+        height: 38vh;
+    }
+
+    .leader-p {
+        font-size: 11px;
+        line-height: 18px;
+        overflow-y: scroll;
+
+    }
+
+    .c-box {
+        width: 234px;
+        height: 268px;
+    }
+
+    .leader {
+        height: 28vh;
+    }
+
+    .footerStart {
+        justify-content: center;
+    }
+
+    .footerh1 {
+        font-size: 13px;
+    }
+
+    .footer-list {
+        gap: 3px;
+    }
+
+    .footertag {
+        font-size: 9px;
+    }
+
+    .footer-list {
+        display: block;
+    }
+
+    .footerEnd {
+        margin: 4px;
+    }
+
+    .courseh1 {
+        font-size: 3rem;
+    }
+
+    .vlogh1 {
+        font-size: 3rem;
+        margin-top: 1rem;
+        padding: 12px;
+    }
+
+    .vlogp {
+        font-size: 22px;
+        width: 93%;
+        font-weight: lighter;
+        margin: 0 auto;
+        letter-spacing: 3px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .history-img {
+        width: 254px;
+        border-radius: 20px;
+    }
+
+    .recognitions-scroll {
+        gap: 2px;
+    }
+
+    .login {
+        width: 100%;
+        height: 38vh;
+    }
+
+    .leader-box {
+        width: 245px;
+    }
+
+    .leader-p {
+        font-size: 11px;
+        line-height: 18px;
+        overflow-y: scroll;
+
+    }
+
+    .courseh1 {
+        font-size: 3rem;
+    }
+
+    .leader {
+        height: 28vh;
+    }
+
+    .footerStart {
+        justify-content: center;
+    }
+
+    .footerh1 {
+        font-size: 13px;
+    }
+
+    .footer-list {
+        gap: 3px;
+    }
+
+    .footertag {
+        font-size: 9px;
+    }
+
+    .footer-list {
+        display: block;
+    }
+
+    .footerEnd {
+        margin: 4px;
+    }
+
+    .c-box {
+        width: 192px;
+        height: 302px;
+    }
+}

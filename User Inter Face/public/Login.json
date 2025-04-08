@@ -1,0 +1,22 @@
+{
+    "url": [
+        {
+            "id": 1,
+            "imgUrl": "https://cdn.pixabay.com/photo/2016/11/20/09/06/laptop-1842297_1280.jpg",
+            "url": "/student/login",
+            "Info":"Student Login"
+        },
+        {
+            "id": 2,
+            "imgUrl": "https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_960_720.jpg",
+            "url": "/employee/login",
+            "Info":"Employee Login"
+        },
+        {
+            "id": 3,
+            "imgUrl": "https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849824_1280.jpg",
+            "url": "/admin/login",
+            "Info":"Admin Login"
+        }
+    ]
+}

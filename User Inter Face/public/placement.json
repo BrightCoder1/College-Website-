@@ -1,0 +1,32 @@
+{
+    "placement":[
+        {
+            "id":1,
+            "url":"/Images/tcs.png"
+        },
+        {
+            "id":2,
+            "url":"/Images/amazon.png"
+        },
+        {
+            "id":3,
+            "url":"/Images/ibm.png"
+        },
+        {
+            "id":4,
+            "url":"/Images/bajaj.png"
+        },
+        {
+            "id":5,
+            "url":"/Images/hdfc.png"
+        },
+        {
+            "id":6,
+            "url":"/Images/spotify.png"
+        },
+        {
+            "id":7,
+            "url":"/Images/swiggy.png"
+        }
+    ]
+}
