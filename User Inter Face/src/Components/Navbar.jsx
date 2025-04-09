@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "C:/Users/vs035/OneDrive/Desktop/Vivek University Bijnor/Frontend/public/Images/Logo.jpg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosCloseCircle } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,29 +26,29 @@ const Navbar = () => {
 
         <ul className={menuOpen ? "list active" : "list"}>
           <li className="listItem">
-            <a href="/" className="listtag">Home</a>
+            <Link to="/" className="listtag">Home</Link>
           </li>
           <li className="listItem">
-            <a href="/course" className="listtag">Course</a>
+            <Link to="/course" className="listtag">Course</Link>
           </li>
           <li className="listItem">
-            <a href="/vlog" className="listtag">Vlog</a>
+            <Link to="/vlog" className="listtag">Vlog</Link>
           </li>
           <li className="listItem">
-            <a href="/contact" className="listtag">Contact</a>
+            <Link to="/contact" className="listtag">Contact</Link>
           </li>
           <li className="listItem">
-            <a href="/placement" className="listtag">Placement</a>
+            <Link to="/placement" className="listtag">Placement</Link>
           </li>
           <li className="listItem">
-            <a href="/gallery" className="listtag">Gallery</a>
+            <Link to="/gallery" className="listtag">Gallery</Link>
           </li>
           <li className="listItem">
-            <a href="/admission" className="listtag">Admission</a>
+            <Link to="/admission" className="listtag">Admission</Link>
           </li>
 
           <li className="listItem">
-            <a href="/login" className="listtag">Login</a>
+            <Link to="/login" className="listtag">Login</Link>
           </li>
         </ul>
       </div>

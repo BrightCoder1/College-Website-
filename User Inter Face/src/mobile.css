@@ -4,17 +4,34 @@
     justify-content: center;
 }
 
-.vlogh1 {
-    font-size: 3rem;
-    margin: 0;
-    line-height: 69px;
-    letter-spacing: 0px;
-    color: #1f348d;
-    margin-top: 9rem;
-}
+
 
 /* mobile */
 @media (max-width: 992px) {
+    .vlogh1 {
+        font-size: 3rem;
+        margin: 0;
+        line-height: 69px;
+        width: 100%;
+        letter-spacing: 0px;
+        color: #1f348d;
+        margin-top: 9rem;
+    }
+
+    .vlogp {
+        width: 82%;
+        margin-top: 1rem;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .hamburger-icon {
+        display: block;
+        margin-right: 3rem;
+    }
+
     .home {
         flex-direction: column;
     }
@@ -115,6 +132,30 @@
         margin-right: 2rem;
     }
 
+    .vlogh1 {
+        font-size: 3rem;
+        margin: 0;
+        line-height: 69px;
+        width: 100%;
+        letter-spacing: 0px;
+        color: #1f348d;
+        margin-top: 9rem;
+    }
+
+    .vlogp {
+        width: 82%;
+        margin-top: 1rem;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .hamburger-icon {
+        display: block;
+        margin-right: 3rem;
+    }
+
     .list {
         position: fixed;
         top: 0;
@@ -178,6 +219,18 @@
 
     .leader-box {
         width: 245px;
+    }
+
+    .home-p {
+        font-size: 16px;
+        line-height: 30px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .homeImg {
+        width: 57% !important;
+        margin-top: -100px;
     }
 
     .list.active {
@@ -277,11 +330,39 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .placement2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .p2-h1 {
+        font-size: 22px;
+    }
+
+    .p2-p {
+        font-size: 14px;
+    }
+
+    .p2-img {
+        width: 85%;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
 }
 
 @media (max-width: 686px) {
     .h2-heading {
         font-size: 2rem;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .hamburger-icon {
+        display: block;
+        margin-right: 3rem;
     }
 
     .vlog-img {
@@ -296,6 +377,21 @@
     .home-p {
         font-size: 16px;
         line-height: 30px;
+    }
+
+    .vlogh1 {
+        font-size: 3rem;
+        margin: 0;
+        line-height: 69px;
+        width: 100%;
+        letter-spacing: 0px;
+        color: #1f348d;
+        margin-top: 9rem;
+    }
+
+    .vlogp {
+        width: 82%;
+        margin-top: 1rem;
     }
 
     .leader-h1 {
@@ -384,7 +480,7 @@
     .vlogh1 {
         font-size: 3rem;
         margin-top: 1rem;
-        padding: 12px;
+        width: 80%;
     }
 
     .vlogp {
@@ -393,6 +489,53 @@
         font-weight: lighter;
         margin: 0 auto;
         letter-spacing: 3px;
+    }
+
+    .home-p {
+        font-size: 16px;
+        line-height: 30px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .homeImg {
+        width: 57% !important;
+        margin-top: -100px;
+    }
+
+    .placement2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .p2-h1 {
+        font-size: 22px;
+    }
+
+    .p2-p {
+        font-size: 14px;
+    }
+
+    .p2-img {
+        width: 85%;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+
+    .company {
+        height: 6vh;
+    }
+
+    .company-ul {
+        gap: 1rem;
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .company-img {
+        width: 128px;
     }
 }
 
@@ -403,8 +546,61 @@
         border-radius: 20px;
     }
 
+    .vlog-img {
+        height: 389px;
+        width: 403px;
+    }
+
     .recognitions-scroll {
         gap: 2px;
+    }
+
+    .vlogh1 {
+        font-size: 3rem;
+        margin: 0;
+        line-height: 69px;
+        width: 100%;
+        letter-spacing: 0px;
+        color: #1f348d;
+        margin-top: 9rem;
+    }
+
+    .placement2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .p2-h1 {
+        font-size: 22px;
+    }
+
+    .p2-p {
+        font-size: 14px;
+    }
+
+    .p2-img {
+        width: 85%;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+
+    .vlogp {
+        width: 82%;
+        margin-top: 1rem;
+    }
+
+    .homeImg {
+        width: 50% !important;
+        margin-top: -100px;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .hamburger-icon {
+        display: block;
+        margin-right: 3rem;
     }
 
     .login {
@@ -458,5 +654,19 @@
     .c-box {
         width: 192px;
         height: 302px;
+    }
+
+    .home-p {
+        font-size: 16px;
+        line-height: 30px;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:360px) {
+    .vlog-img {
+        height: 309px;
+        width: 350px;
     }
 }

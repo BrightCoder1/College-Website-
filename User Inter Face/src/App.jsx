@@ -11,6 +11,7 @@ import Contact from './Page/Contact.jsx';
 import Gallery from './Page/Gallery.jsx';
 import Admission from './Page/Admission.jsx';
 import Login from './Page/Login.jsx';
+import Placement from './Page/Placement.jsx';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/admission" element={<Admission />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/placement" element={<Placement />} />
         </Routes>
         <Footer />
       </Router>
