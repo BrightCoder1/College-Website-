@@ -18,8 +18,8 @@ const menuItems = [
   { name: 'Attendance', path: '/admin/attendance', icon: <MdPermContactCalendar /> },
   { name: 'Events', path: '/events', icon: <MdDateRange /> },
   { name: 'Library', path: '/admin/library', icon: <MdLibraryBooks /> },
-  { name: 'Notification', path: '/notification', icon: <IoIosNotifications /> },
-  { name: 'Settings', path: '/settings', icon: <IoMdSettings /> },
+  { name: 'Notification', path: '/admin/notification', icon: <IoIosNotifications /> },
+  { name: 'Settings', path: '/admin/setting', icon: <IoMdSettings /> },
 ];
 
 const AdminNavbar = () => {

@@ -20,6 +20,8 @@ import Transport from './Components/Admin/page/Transport.jsx';
 import Attendance from './Components/Admin/page/Attendance.jsx';
 import Message from './Components/Admin/page/Message.jsx';
 import Library from './Components/Admin/page/Library.jsx';
+import Notification from './Components/Admin/page/Notification.jsx';
+import Setting from './Components/Admin/page/Setting.jsx';
 
 const App = () => {
   const [login, setLogin] = useState(true);
@@ -46,6 +48,8 @@ const App = () => {
           <Route path='/admin/attendance' element={<Attendance />} />
           <Route path='/admin/contact' element={<Message />} />
           <Route path='/admin/library' element={<Library />} />
+          <Route path='/admin/notification' element={<Notification />} />
+          <Route path='/admin/setting' element={<Setting />} />
         </Routes>
         {!login && <Footer />}
         {/* <Footer /> */}

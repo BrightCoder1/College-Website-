@@ -1,12 +1,12 @@
 import React from 'react'
 import AttendanceList from '../AttendanceList';
-import AdminNavbar from '../AdminNavbar';
+// import AdminNavbar from '../AdminNavbar';
 
 const Attendance = () => {
     return (
         <>
             <div className="dashboard">
-                <AdminNavbar />
+                {/* <AdminNavbar /> */}
                 <div className="tableSet">
                     <AttendanceList />
                 </div>

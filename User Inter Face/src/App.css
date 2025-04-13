@@ -35,6 +35,7 @@ body {
   font-size: 32px;
 }
 
+
 .list {
   display: flex;
   gap: 2rem;
@@ -2553,4 +2554,17 @@ td {
   width: 100%;
   font-family: sans-serif;
   overflow: scroll;
+}
+
+
+.flexNotice{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+
+.icon-setting{
+  font-size: 15px;
 }
