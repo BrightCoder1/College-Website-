@@ -317,6 +317,12 @@
         padding: 12px;
     }
 
+    .footerEnd {
+        font-size: 10px;
+        width: 80%;
+        text-align: center;
+    }
+
     .vlogp {
         font-size: 22px;
         width: 93%;
@@ -526,12 +532,18 @@
         height: 6vh;
     }
 
+    .footerEnd {
+        font-size: 10px;
+        width: 80%;
+        text-align: center;
+    }
+
     .company-ul {
         gap: 1rem;
         height: 6vh;
         display: flex;
         justify-content: center;
-        
+
     }
 
     .company-img {
@@ -596,6 +608,12 @@
 
     .logo {
         width: 50px;
+    }
+
+    .footerEnd {
+        font-size: 10px;
+        width: 80%;
+        text-align: center;
     }
 
     .hamburger-icon {
@@ -668,5 +686,11 @@
     .vlog-img {
         height: 309px;
         width: 350px;
+    }
+
+    .footerEnd {
+        font-size: 10px;
+        width: 80%;
+        text-align: center;
     }
 }
