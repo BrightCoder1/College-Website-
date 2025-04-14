@@ -30,12 +30,12 @@ const AdmissionForm = () => {
 
         try {
             const response = await axios.post(
-                "http://localhost:3000/newadmission",
-                formData, // Send formData object directly
+                "http://localhost:3000/admission",
+                formData,
                 {
                     withCredentials: true,
                     headers: {
-                        "Content-Type": "application/json", // Set Content-Type to JSON
+                        "Content-Type": "application/json",
                     },
                 }
             );
@@ -45,7 +45,6 @@ const AdmissionForm = () => {
                     autoClose: 3000,
                     position: "top-center",
                 });
-                navigate("/admission");
                 setFormData({
                     firstName: '',
                     lastName: '',
@@ -56,21 +55,29 @@ const AdmissionForm = () => {
                     address: '',
                     course: '',
                 });
+                navigate("/admission");
             }
         } catch (error) {
             console.error("Error submitting form:", error);
-            toast.error("Failed to send information. Please try again.", {
-                position: "top-center",
+
+            const message =
+                error.response && error.response.data && error.response.data.message
+                    ? error.response.data.message
+                    : "Failed to send information. Please try again.";
+
+            toast.error(message, {
+                position: "bottom-center",
                 autoClose: 3000,
             });
         }
     };
 
 
+
     return (
         <>
             <div className="admission-form-container">
-                <ToastContainer className="index" />
+                <ToastContainer className="z-index" />
                 <h1>College Admission Form 2025</h1>
                 <form className="admission-form" onSubmit={handleSubmit} method='post' >
                     <div className="form-group">

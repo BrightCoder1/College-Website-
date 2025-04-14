@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import "./ContactFrom.css";
+import { ToastContainer, toast } from 'react-toastify';
+import axios from "axios";
 
 
 const ContactForm = () => {
@@ -18,13 +20,29 @@ const ContactForm = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
+        try {
+
+            await axios.post(
+                "http://localhost:3000/contact",
+                formData,
+                {
+                    headers: { "Content-Type": "application/json" }
+                }
+            );
+
+            toast.success("Message Send Successfully!...");
+
+        } catch (error) {
+            console.log(error);
+            toast.error("Something want wrong!..");
+        }
     };
 
     return (
         <div className="contact">
+            <ToastContainer className="z-index" />
             <section className="contact-section">
                 <div className="contact-intro">
                     <h2 className="contact-title">Contact Form</h2>
@@ -33,7 +51,7 @@ const ContactForm = () => {
                     </p>
                 </div>
 
-                <form className="contact-form" onSubmit={handleSubmit}>
+                <form method='post' className="contact-form" onSubmit={handleSubmit}>
                     <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
                     <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
                     <input type="hidden" name="from_name" value="My Website" />

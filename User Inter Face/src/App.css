@@ -2568,3 +2568,8 @@ td {
 .icon-setting{
   font-size: 15px;
 }
+
+
+.z-index{
+  z-index: 99999 !important;
+}

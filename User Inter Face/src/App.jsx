@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import Navbar from './Components/Navbar.jsx'
+import React, { useEffect, useState } from 'react';
+import Navbar from './Components/Navbar.jsx';
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './Page/Home.jsx';
-import "./mobile.css"
+import "./mobile.css";
 import Footer from './Components/Footer.jsx';
 import Course from './Page/Course.jsx';
 import Vlog from './Components/Vlog.jsx';
@@ -22,14 +22,33 @@ import Message from './Components/Admin/page/Message.jsx';
 import Library from './Components/Admin/page/Library.jsx';
 import Notification from './Components/Admin/page/Notification.jsx';
 import Setting from './Components/Admin/page/Setting.jsx';
+import { ToastContainer, toast } from 'react-toastify';
+import axios from 'axios';
+import AddStaff from './Components/Admin/AddStaff.jsx';
 
 const App = () => {
   const [login, setLogin] = useState(true);
 
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        await axios.get("http://localhost:3000", {
+          withCredentials: true
+        });
+
+      } catch (error) {
+        console.log(error);
+        toast.error("Something went wrong!..");
+      }
+    };
+
+    fetchUser();
+  }, []);
+
   return (
     <>
+      <ToastContainer className="z-index" />
       <Router>
-        {/* <Navbar /> */}
         {!login && <Navbar />}
         <Routes>
           <Route path='/' element={<Home />} />
@@ -50,12 +69,12 @@ const App = () => {
           <Route path='/admin/library' element={<Library />} />
           <Route path='/admin/notification' element={<Notification />} />
           <Route path='/admin/setting' element={<Setting />} />
+          <Route path="/add" element={<AddStaff />} />
         </Routes>
         {!login && <Footer />}
-        {/* <Footer /> */}
       </Router>
     </>
   )
 }
 
-export default App
+export default App;

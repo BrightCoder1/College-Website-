@@ -45,7 +45,7 @@ function StaffTable() {
                         />
                     </form>
                 </div>
-                <Link to="/addteacher" className='add'>Add</Link>
+                
             </div>
 
             {loading ? (
