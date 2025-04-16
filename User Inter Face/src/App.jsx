@@ -24,7 +24,11 @@ import Notification from './Components/Admin/page/Notification.jsx';
 import Setting from './Components/Admin/page/Setting.jsx';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
-import AddStaff from './Components/Admin/AddStaff.jsx';
+import AddStaff from './Components/Admin/Forms/AddStaff.jsx';
+import AddStudent from './Components/Admin/Forms/AddStudent.jsx';
+import AddTransport from './Components/Admin/Forms/AddTransport.jsx';
+import Tasks from './Components/Admin/page/Tasks.jsx';
+import AddTask from './Components/Admin/Forms/AddTask.jsx';
 
 const App = () => {
   const [login, setLogin] = useState(true);
@@ -70,6 +74,10 @@ const App = () => {
           <Route path='/admin/notification' element={<Notification />} />
           <Route path='/admin/setting' element={<Setting />} />
           <Route path="/add" element={<AddStaff />} />
+          <Route path='/add/student' element={<AddStudent />} />
+          <Route path='/admin/addtransport' element={<AddTransport />} />
+          <Route path='/tasks' element={<Tasks />} />
+          <Route path='/add/tasks' element={<AddTask />} />
         </Routes>
         {!login && <Footer />}
       </Router>

@@ -1,51 +1,54 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { MdDelete } from "react-icons/md";
+import { ToastContainer, toast } from 'react-toastify';
+import axios from 'axios';
 
 function StaffTable() {
     const [staff, setStaff] = useState([]);
-    const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
-    const [randomStaff, setRandomStaff] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const fakeStaff = [
-            { name: 'Dr. A. Sharma', phone: '9876543210', dept: 'Physics', degree: 'PhD', salary: '70000' },
-            { name: 'Prof. B. Kumar', phone: '9123456789', dept: 'Mathematics', degree: 'MSc', salary: '65000' },
-            { name: 'Dr. C. Mehta', phone: '9988776655', dept: 'Biology', degree: 'PhD', salary: '72000' },
-            { name: 'Ms. D. Roy', phone: '8888999900', dept: 'Chemistry', degree: 'MSc', salary: '60000' },
-        ];
+        const fetchData = async () => {
+            try {
+                const response = await axios.post("http://localhost:3000/admin/staff", {}, {
+                    withCredentials: true
+                });
 
-        setStaff(fakeStaff);
-        setLoading(false);
+                // const employee = response.data.data.filter(item => item.staffOrProfessor === "employee")
+                setStaff(response.data.data);
+                setLoading(false);
+            } catch (error) {
+                toast.error("Something Went Wrong!");
+                setLoading(false);
+            }
+        };
 
-        // Pick random staff
-        const randomIndex = Math.floor(Math.random() * fakeStaff.length);
-        setRandomStaff(fakeStaff[randomIndex]);
+        fetchData();
     }, []);
 
     const filteredStaff = staff.filter(item =>
-    (item.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.phone?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.dept?.toLowerCase().includes(searchTerm.toLowerCase()))
+        item.dept?.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     return (
         <div className="table-container">
+            <ToastContainer />
             <div className="table-nav">
                 <h1 className="t-h1">Teachers</h1>
                 <div className="student-list-header dashboardSearch right">
-                    <form onSubmit={(e) => e.preventDefault()} className=''>
+                    <form onSubmit={(e) => e.preventDefault()}>
                         <input
                             type="text"
                             className="search"
-                            placeholder='Search by Name, Phone, or Department...'
+                            placeholder="Search by Name, Phone, or Department..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
                     </form>
                 </div>
-                
             </div>
 
             {loading ? (
@@ -59,6 +62,7 @@ function StaffTable() {
                             <th>Department</th>
                             <th>Degree</th>
                             <th>Salary</th>
+                            <th>Type</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -71,6 +75,7 @@ function StaffTable() {
                                     <td>{item.dept || "N/A"}</td>
                                     <td>{item.degree || "N/A"}</td>
                                     <td>{item.salary || "N/A"}</td>
+                                    <td>{item.staffOrProfessor.toUpperCase() || "N/A"}</td>
                                     <td>
                                         <span className="actions">
                                             <span role="img" aria-label="view">👀</span>
@@ -82,7 +87,7 @@ function StaffTable() {
                             ))
                         ) : (
                             <tr>
-                                <td colSpan="7">No staff found.</td>
+                                <td colSpan="6">No staff found.</td>
                             </tr>
                         )}
                     </tbody>

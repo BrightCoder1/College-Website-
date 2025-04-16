@@ -48,7 +48,6 @@ const staffSchema = new mongoose.Schema({
     staffOrProfessor: { 
         type: String,
         required: true,
-        enum: ["admin", "employee", "student"]
     },
     password: {
         type: String,

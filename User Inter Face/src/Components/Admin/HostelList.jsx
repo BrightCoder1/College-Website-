@@ -1,4 +1,6 @@
+import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 const HotelList = () => {
     const [filteredData, setFilteredData] = useState([]);
@@ -12,64 +14,20 @@ const HotelList = () => {
     });
 
     useEffect(() => {
-        generateRandomHostelData();
+        const fetchData = async () => {
+            try {
+                const response = await axios.get("http://localhost:3000/admin/hostel", {
+                    withCredentials: true
+                });
+                setFilteredData(response.data.data);
+            } catch (error) {
+                toast.error("Something went wrong while fetching data!");
+            }
+        };
+
+        fetchData();
     }, []);
 
-    const generateRandomHostelData = () => {
-        const sampleData = [
-            {
-                block: 'A',
-                roomNo: '101',
-                roomType: 'Single',
-                noOfBeds: 1,
-                availability: 'Available',
-                firstName: 'Rahul',
-                lastName: 'Verma',
-            },
-            {
-                block: 'B',
-                roomNo: '203',
-                roomType: 'Double',
-                noOfBeds: 2,
-                availability: 'Occupied',
-                firstName: 'Anjali',
-                lastName: 'Sharma',
-            },
-            {
-                block: 'C',
-                roomNo: '305',
-                roomType: 'Triple',
-                noOfBeds: 3,
-                availability: 'Available',
-                firstName: 'Amit',
-                lastName: 'Patel',
-            },
-            {
-                block: 'D',
-                roomNo: '407',
-                roomType: 'Double',
-                noOfBeds: 2,
-                availability: 'Occupied',
-                firstName: 'Sneha',
-                lastName: 'Rao',
-            },
-            {
-                block: 'A',
-                roomNo: '108',
-                roomType: 'Single',
-                noOfBeds: 1,
-                availability: 'Available',
-                firstName: 'Karan',
-                lastName: 'Joshi',
-            },
-        ];
-
-        // Shuffle array randomly and pick 3 random records
-        const shuffled = sampleData.sort(() => 0.5 - Math.random());
-        const randomSubset = shuffled.slice(0, 3);
-
-        setFilteredData(randomSubset);
-    };
 
     const handleChange = (e) => {
         setSearchTerm({ ...searchTerm, [e.target.name]: e.target.value });
@@ -109,11 +67,12 @@ const HotelList = () => {
                         <th>TYPE</th>
                         <th>NO OF BED</th>
                         <th>STUDENT NAME</th>
+                        <th>COURSE</th>
                     </tr>
                 </thead>
                 <tbody>
                     {filteredData
-                        .filter(room => room.roomNo !== null)
+                        .filter(room => room.roomNo !== null) // Optional: Filter out null room numbers
                         .map((room, index) => (
                             <tr key={index}>
                                 <td>{room.block}</td>
@@ -121,6 +80,7 @@ const HotelList = () => {
                                 <td>{room.roomType}</td>
                                 <td>{room.noOfBeds}</td>
                                 <td>{room.firstName + " " + room.lastName}</td>
+                                <td>{room.class}</td>
                             </tr>
                         ))
                     }

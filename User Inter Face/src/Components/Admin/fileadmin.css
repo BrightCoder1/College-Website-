@@ -1,7 +1,7 @@
 /* Main Form Container */
 .student-add-page {
     position: absolute;
-    top: 20px;
+    top: 0px;
     width: 100%;
     background-color: white;
     /* padding: 25px; */
@@ -159,11 +159,26 @@
     }
 }
 
-.adminadd{
-    margin-bottom: 2rem ;
+.adminadd {
+    margin-bottom: 2rem;
 
 }
 
-.addmargin{
+.addmargin {
     margin-left: 3rem;
+}
+
+
+.transport-add-page {
+    width: 100% !important;
+}
+
+.center {
+    text-align: center !important;
+}
+
+
+.duration {
+    width: 81% !important;
+    height: 39px !important;
 }

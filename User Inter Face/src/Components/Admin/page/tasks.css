@@ -1,0 +1,34 @@
+/* TaskPage.css */
+
+.task-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.task-item {
+    margin-bottom: 10px;
+}
+
+.task-card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    padding: 20px;
+    border-radius: 10px;
+    background: #feffc5;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.postion {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.duration {
+    width: 81%;
+    height: 39px;
+}
