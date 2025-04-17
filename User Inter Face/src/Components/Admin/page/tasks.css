@@ -32,3 +32,12 @@
     width: 81%;
     height: 39px;
 }
+
+.btncontainer{
+    display: flex;
+    gap: 2rem;
+}
+
+.color{
+    background-color: rgb(86, 86, 237) !important;
+}

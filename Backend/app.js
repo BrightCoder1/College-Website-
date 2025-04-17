@@ -7,6 +7,8 @@ import Staff from "./model/StaffSchema.js";
 import Student from "./model/StudentSchema.js";
 import Transport from "./model/TransportSchema.js";
 import Task from "./model/TaskSchema.js";
+import Notice from "./model/NoticeSchema.js";
+import Books from "./model/addBook.js";
 
 const app = express();
 
@@ -261,7 +263,7 @@ app.post("/add/tasks", async (req, res) => {
             name,
             email,
             description,
-            duration 
+            duration
         });
 
         await task.save();
@@ -280,6 +282,90 @@ app.post("/add/tasks", async (req, res) => {
 });
 
 
+app.get("/tasks", async (req, res) => {
+    try {
+        const tasks = await Task.find().sort({ createtime: -1 });
+        res.status(200).json(tasks);
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error"
+        });
+    }
+});
+
+app.get("/admin/notification", async (req, res) => {
+    try {
+        const notice = await Notice.find().sort({ createTime: -1 });
+        console.log(notice);
+        res.status(200).json({
+            success: true,
+            notice
+        });
+
+    } catch (error) {
+        res.status(500).json({
+            message: "Internal Server Error!..",
+            success: false
+        })
+    }
+})
+
+
+app.post("/add/notice", async (req, res) => {
+    try {
+        const { name, email, notice } = req.body;
+        const data = new Notice({
+            name,
+            email,
+            notice,
+            date: new Date()
+        });
+
+        await data.save();
+        res.status(200).json({
+            success: true,
+            message: "Data Send Successfully!"
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error!..."
+        })
+    }
+})
+
+app.post("/addbook", async (req, res) => {
+    try {
+        const { authName, bookName, bookCode, bookDescription, bookCatag } = req.body;
+
+        if (!authName || !bookName || !bookCode || !bookDescription) {
+            return res.status(400).json({ success: false, message: "Required fields are missing" });
+        }
+
+        const dataSave = new Books({ authName, bookName, bookCode, bookDescription, bookCatag });
+        await dataSave.save();
+
+        res.status(200).json({ success: true, message: "Form submited successfully!" });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error!..."
+        })
+    }
+})
+
+
+app.get("/admin/library", async (req, res) => {
+    try {
+        const data = await Books.find({});
+        // console.log(data);
+        res.status(200).json({ success: true, data });
+    } catch (error) {
+        res.status(400).json({ success: false, message: "Something went wrong!" });
+
+    }
+})
 
 
 export default app;

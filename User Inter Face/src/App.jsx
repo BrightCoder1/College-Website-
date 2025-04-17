@@ -29,6 +29,8 @@ import AddStudent from './Components/Admin/Forms/AddStudent.jsx';
 import AddTransport from './Components/Admin/Forms/AddTransport.jsx';
 import Tasks from './Components/Admin/page/Tasks.jsx';
 import AddTask from './Components/Admin/Forms/AddTask.jsx';
+import AddNotice from './Components/Admin/Forms/AddNotice.jsx';
+import AddBook from './Components/Admin/Forms/AddBook.jsx';
 
 const App = () => {
   const [login, setLogin] = useState(true);
@@ -78,6 +80,8 @@ const App = () => {
           <Route path='/admin/addtransport' element={<AddTransport />} />
           <Route path='/tasks' element={<Tasks />} />
           <Route path='/add/tasks' element={<AddTask />} />
+          <Route path='/add/notice' element={<AddNotice />} />
+          <Route path='/addbook' element={<AddBook />} />
         </Routes>
         {!login && <Footer />}
       </Router>

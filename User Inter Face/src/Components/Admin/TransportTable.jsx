@@ -84,7 +84,7 @@ const TransportTable = () => {
     return (
         <div className="dashboard">
             <div className="driver-table-container">
-                <div className="postion flex">
+                <div className="flex flexbar">
                     <form className="search-form" onSubmit={handleSearch}>
                         <input
                             type="text"
