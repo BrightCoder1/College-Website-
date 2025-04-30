@@ -362,10 +362,106 @@ app.get("/admin/library", async (req, res) => {
         // console.log(data);
         res.status(200).json({ success: true, data });
     } catch (error) {
-        res.status(400).json({ success: false, message: "Something went wrong!" });
-
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error!..."
+        })
     }
 })
 
+// Login Page
+app.post("/login", async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        // console.log({ email, password });
+        const StudentFind = await Student.findOne({ email: email });
+
+        if (email === StudentFind.email || password === StudentFind.password) {
+            res.status(200).json({
+                success: true,
+                message: "Student Login Successfully!..."
+            })
+        } else {
+            res.status(404).json({
+                success: false,
+                message: "Ivalid Details"
+            })
+        }
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error!..."
+        })
+    }
+})
+
+
+app.post("/admin/login", async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        // console.log({ email, password });
+        const AdminFind = await Staff.findOne({ email: email });
+        // console.log(AdminFind);
+        if (!AdminFind) {
+            res.status(404).json({
+                success: false,
+                message: "Invalid Details"
+            })
+        }
+
+        if (email === AdminFind.email || password === AdminFind.password) {
+            res.status(200).json({
+                success: true,
+                message: "Login Successfully!.."
+            })
+        } else {
+            res.status(400).json({
+                success: false,
+                message: "Invalid Details"
+            })
+        }
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error!.."
+        })
+    }
+})
+
+// Test this
+app.post("/employee/login", async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        // console.log({ email, password })
+        const EmployeeFind = await Staff.findOne({ email: email });
+
+        if (!EmployeeFind) {
+            res.status(404).json({
+                success: false,
+                message: "Invalid Details"
+            })
+        }
+
+        if (email === EmployeeFind.email || password === EmployeeFind.password) {
+            res.status(200).json({
+                success: true,
+                message: "Login Successfully!.."
+            })
+        } else {
+            res.status(400).json({
+                success: false,
+                message: "Invalid Details"
+            })
+        }
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Internal Server Error!.."
+        })
+    }
+})
 
 export default app;

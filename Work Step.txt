@@ -1,0 +1,16 @@
+22-04-25
+Frontend Part :
+			Admin Login,--------------------------------------------------------
+			Employee Login ,--------------------------------------------------------
+			Student Login,--------------------------------------------------------
+
+
+Backend Part:
+Login route:
+		Admin,-----------------------------------------
+		Employee,
+		Student,-------------------------------------------------------- Not Frontend
+
+23-04-25:
+Set:
+	If user login then navbar remove and user logout then navbar show or do not access admin page without login..... 

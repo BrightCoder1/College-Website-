@@ -2586,3 +2586,287 @@ td {
 .z-index {
   z-index: 99999 !important;
 }
+
+.studentFront {
+  width: 100%;
+}
+
+.studentDashboard {
+  display: flex;
+  position: relative;
+  width: 100% !important;
+}
+
+
+.profile-container {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #2196F3, #5eea9f);
+  min-height: 100vh;
+}
+
+.profile-container h2 {
+  color: #5b21b6;
+  margin: 0;
+  margin-bottom: 10px;
+  padding-top: 23px;
+}
+
+.profile-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.profile-left {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  height: 345px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-left img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.profile-left p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.profile-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.general-info,
+.other-info {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.general-info h3,
+.other-info h3 {
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.general-info table {
+  width: 100%;
+}
+
+.general-info td {
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+.other-info p {
+  font-size: 15px;
+  color: #4b5563;
+}
+
+
+.result-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.result-container h2 {
+  color: #374151;
+}
+
+.student-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.student-info div {
+  margin-bottom: 8px;
+  width: 45%;
+}
+
+.result-table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+.result-table th,
+.result-table td {
+  border: 1px solid #d1d5db;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.result-table th {
+  background-color: #f3f4f6;
+}
+
+.remarks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.remarks div {
+  margin-bottom: 8px;
+  width: 45%;
+}
+
+.task-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.task-search {
+  padding: 8px 12px;
+  width: 250px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.task-actions button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.task-actions .btn-filter {
+  background-color: #10b981;
+}
+.task-actions .btn-export {
+  background-color: #6366f1;
+}
+.task-actions .btn-add {
+  background-color: #3b82f6;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-table th,
+.task-table td {
+  border: 1px solid #e5e7eb;
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.task-table th {
+  background-color: #f9fafb;
+}
+
+.task-title {
+  color: #3b82f6;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.task-title:hover {
+  text-decoration: underline;
+}
+
+
+.payment-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.payment-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #3b82f6;
+}
+
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payment-table th,
+.payment-table td {
+  border: 1px solid #e5e7eb;
+  padding: 14px 18px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.payment-table th {
+  background-color: #f9fafb;
+}
+
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.paid {
+  background-color: #10b981;
+  color: white;
+}
+
+.unpaid {
+  background-color: #ef4444;
+  color: white;
+}
+
+
+
+.max-width{
+  width: 100% !important;
+}
+
+.max-width::-webkit-scrollbar{
+  display: none;
+}

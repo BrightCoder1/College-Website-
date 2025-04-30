@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Components/Navbar.jsx';
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Home from './Page/Home.jsx';
 import "./mobile.css";
 import Footer from './Components/Footer.jsx';
@@ -31,6 +31,14 @@ import Tasks from './Components/Admin/page/Tasks.jsx';
 import AddTask from './Components/Admin/Forms/AddTask.jsx';
 import AddNotice from './Components/Admin/Forms/AddNotice.jsx';
 import AddBook from './Components/Admin/Forms/AddBook.jsx';
+import EmployeeLogin from './Components/Admin/page/EmployeeLogin.jsx';
+import AdminLogin from './Components/Admin/page/AdminLogin.jsx';
+import StudentLogin from './Page/StudentDashboard.jsx';
+import StudentResult from './Components/Student/StudentResult.jsx';
+import StudentTask from './Components/Student/StudentTask.jsx';
+import StudentPayment from './Components/Student/StudnetPayment.jsx';
+import StudentNotice from './Components/Student/StudentNotice.jsx';
+import StudentLibrary from './Components/Student/StudentLibrary.jsx';
 
 const App = () => {
   const [login, setLogin] = useState(true);
@@ -64,6 +72,8 @@ const App = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/admission" element={<Admission />} />
           <Route path="/login" element={<Login />} />
+          <Route path='/admin/login' element={<AdminLogin />} />
+          <Route path='/employee/login' element={<EmployeeLogin />} />
           <Route path="/placement" element={<Placement />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/students" element={<Student />} />
@@ -82,6 +92,13 @@ const App = () => {
           <Route path='/add/tasks' element={<AddTask />} />
           <Route path='/add/notice' element={<AddNotice />} />
           <Route path='/addbook' element={<AddBook />} />
+          <Route path='/student/profile' element={<StudentLogin />} />
+          <Route path='/student/result' element={<StudentResult />} />
+          <Route path='/student/tasks' element={<StudentTask />} />
+          <Route path='/student/fess' element={<StudentPayment />} />
+          <Route path='/student/attendance' />
+          <Route path='/student/notice' element={<StudentNotice />} />
+          <Route path='/student/library' element={<StudentLibrary />} />
         </Routes>
         {!login && <Footer />}
       </Router>

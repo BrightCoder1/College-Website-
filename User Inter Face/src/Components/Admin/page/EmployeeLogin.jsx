@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-import './ContactFrom.css';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import axios from 'axios';
-import { Link, useNavigate } from "react-router-dom"
-import "./login.css";
-const Login = () => {
-    const navigate = useNavigate();
+import { Link } from 'react-router-dom';
 
+const EmployeeLogin = () => {
     const [formData, setFormData] = useState({
         email: '',
         password: '',
@@ -24,30 +21,27 @@ const Login = () => {
         e.preventDefault();
         try {
             const response = await axios.post(
-                'http://localhost:3000/login',
+                'http://localhost:3000/employee/login', 
                 formData,
                 {
                     headers: { 'Content-Type': 'application/json' },
                     withCredentials: true,
                 }
             );
-            // console.log(response.data);
-            // navigate("/student");
-            toast.success("User Login Successfully!..");
+            
         } catch (error) {
             toast.error('Something went wrong!');
-            console.error('Login error:', error);
+            console.error('Employee login error:', error);
         }
     };
 
     return (
         <div className="contact">
-            <ToastContainer className="z-index" />
             <section className="contact-section">
                 <div className="contact-intro">
-                    <h2 className="contact-title">Login Form</h2>
+                    <h2 className="contact-title">Employee Login</h2>
                     <p className="contact-description">
-                        Please fill out the form to login.
+                        Please enter your credentials to login as an employee.
                     </p>
                 </div>
 
@@ -59,7 +53,7 @@ const Login = () => {
                                 id="email"
                                 name="email"
                                 className="form-input"
-                                placeholder="Your email"
+                                placeholder="Employee email"
                                 type="email"
                                 value={formData.email}
                                 onChange={handleChange}
@@ -73,7 +67,7 @@ const Login = () => {
                                 id="password"
                                 name="password"
                                 className="form-input"
-                                placeholder="Your Password"
+                                placeholder="Password"
                                 type="password"
                                 value={formData.password}
                                 onChange={handleChange}
@@ -83,8 +77,8 @@ const Login = () => {
                     </div>
                     <button className="form-submit" type="submit">Login</button>
                     <div className="loginAdmn">
+                        <Link to="/login">User Login</Link>
                         <Link to="/admin/login">Admin Login</Link>
-                        <Link to="/employee/login">Employee Login</Link>
                     </div>
                 </form>
             </section>
@@ -92,4 +86,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default EmployeeLogin;
