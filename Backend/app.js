@@ -245,6 +245,9 @@ app.post("/add/student", upload.fields([{ name: "avatar", maxCount: 1 }, { name:
             parentAvatar: req.files["parentAvatar"]?.[0]?.path || "",
         });
 
+        // token Generate token
+        const token = await studentData.generateToken();
+        console.log(token);
         await studentData.save();
         res.status(201).json({ success: true, message: "Student added successfully!" });
 

@@ -1,4 +1,7 @@
 import mongoose from "mongoose";
+import jwt from "jsonwebtoken"
+import dotenv from "dotenv"
+dotenv.config();
 
 const studentSchema = new mongoose.Schema({
 
@@ -127,8 +130,38 @@ const studentSchema = new mongoose.Schema({
     noOfBeds: {
         type: String,
         default: null
-    }
+    },
+    tokens: [
+        {
+            token: {
+                type: String,
+                required: true
+            }
+        }
+    ]
 });
+
+
+studentSchema.methods.generateToken = async function () {
+    try {
+        const token = await jwt.sign({
+            _id: this._id.toString(),
+        },
+        process.env.JWT_SECRET,
+        {
+            expiresIn: "1h"
+        });
+
+        // Concatenate new token to the tokens array in the student instance
+        this.tokens = this.tokens.concat({ token });
+        await this.save(); // Save the updated student instance to MongoDB
+
+        return token; // Return the generated token
+    } catch (error) {
+        console.log("Token Error: ", error);
+        throw error; // Throw an error if token generation fails
+    }
+};
 
 
 const Student = mongoose.model('Students', studentSchema);
